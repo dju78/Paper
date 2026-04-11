@@ -1,0 +1,25 @@
+{
+  "name": "publications-hub",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "fuse.js": "^7.0.0",
+    "gray-matter": "^4.0.3",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "remark": "^14.0.2",
+    "remark-html": "^15.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "25.6.0",
+    "@types/react": "19.2.14",
+    "typescript": "6.0.2"
+  }
+}
