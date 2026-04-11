@@ -4,7 +4,19 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   metadataBase: new URL('https://omoyelejd.co.uk'),
   title: 'Publications | Daramola Joseph Omoyele',
-  description: 'Academic repository and research portfolio of Daramola Joseph Omoyele.',
+  description: 'Academic repository and research portfolio of Daramola Joseph Omoyele. Explore research on digital governance, tax policy, and development economics.',
+  openGraph: {
+    title: 'Research & Publications | Daramola Joseph Omoyele',
+    description: 'Academic repository and research portfolio focused on Digital Governance, Tax Policy, and Political Economy.',
+    url: 'https://omoyelejd.co.uk',
+    siteName: 'Daramola Joseph Omoyele Publications',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Research & Publications | Daramola Joseph Omoyele',
+    description: 'Academic archive and research portfolio.',
+  },
 }
 
 export default function RootLayout({
