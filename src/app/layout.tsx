@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://omoyelejd.co.uk'),
   title: 'Publications | Daramola Joseph Omoyele',
   description: 'Academic repository and research portfolio of Daramola Joseph Omoyele.',
 }
