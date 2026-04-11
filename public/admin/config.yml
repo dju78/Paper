@@ -1,0 +1,56 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/papers"
+public_folder: "/papers"
+
+collections:
+  - name: "publications"
+    label: "Publications"
+    folder: "content/publications"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Year", name: "year", widget: "number" }
+      - { 
+          label: "Type", 
+          name: "type", 
+          widget: "select", 
+          options: ["Journal Article", "Working Paper", "Policy Paper", "Book", "Article"] 
+        }
+      - { label: "Journal / Publisher", name: "journal", widget: "string", required: false }
+      - { label: "DOI", name: "doi", widget: "string", required: false }
+      - { 
+          label: "Topics", 
+          name: "topics", 
+          widget: "list", 
+          summary: "{{fields.topic}}",
+          field: { 
+            label: "Topic", 
+            name: "topic", 
+            widget: "select", 
+            options: [
+              "Tax Administration and Compliance",
+              "Digital Governance",
+              "Public Policy",
+              "Governance and State Capacity",
+              "Political Economy",
+              "Development Economics",
+              "Electoral Politics",
+              "Migration and International Education",
+              "Data Protection and UK GDPR",
+              "Public Sector Data Analytics",
+              "Financial Reporting and Economic Analysis",
+              "Nigeria Governance Studies",
+              "UK Policy and Administrative Reform"
+            ] 
+          } 
+        }
+      - { label: "Downloadable PDF", name: "pdf", widget: "file", required: false }
+      - { label: "External URL", name: "external_url", widget: "string", required: false }
+      - { label: "APA Citation", name: "citation_apa", widget: "text", required: false }
+      - { label: "BibTeX Citation", name: "citation_bibtex", widget: "text", required: false }
+      - { label: "Abstract", name: "abstract", widget: "text" }
+      - { label: "Body Content", name: "body", widget: "markdown", required: false }
