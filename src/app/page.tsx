@@ -30,10 +30,22 @@ export default async function Page() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
       />
       <div className="container">
-        <div style={{ marginBottom: '4rem' }}>
-          <h1 style={{ fontSize: '3rem', marginBottom: '1rem' }}>Research &amp; Publications</h1>
-          <p className="text-muted" style={{ fontSize: '1.2rem', maxWidth: '700px' }}>
-            An archive of scholarly work, policy analysis, and research outputs by Daramola Joseph Omoyele.
+        <div style={{ maxWidth: '800px', marginBottom: '5rem', paddingTop: '1rem' }}>
+          <h1 style={{ fontSize: '2.8rem', marginBottom: '0.5rem', fontWeight: '800', lineHeight: '1.15' }}>
+            Daramola Joseph Omoyele
+          </h1>
+          <p style={{ color: 'var(--accent)', fontWeight: '600', fontSize: '1rem', marginBottom: '2.5rem', letterSpacing: '0.01em' }}>
+            Economist · Chartered Accountant · Data Analyst · Regulatory &amp; Policy Analytics Specialist
+          </p>
+
+          <p style={{ fontSize: '1.1rem', lineHeight: '1.9', marginBottom: '1.25rem', color: 'var(--text-main)' }}>
+            Daramola Joseph Omoyele is an economist, Chartered Accountant, and senior data analyst whose work focuses on the intersection of public policy, regulatory governance, digital administration, and applied economic analysis. His research explores how institutions, compliance systems, and administrative design influence economic outcomes, public accountability, and state capacity.
+          </p>
+          <p style={{ fontSize: '1.1rem', lineHeight: '1.9', marginBottom: '1.25rem', color: 'var(--text-main)' }}>
+            With experience spanning both private-sector analytics and public service, he brings a practical and interdisciplinary perspective to questions of development, taxation, digital governance, and institutional performance. His work is guided by a commitment to rigorous, policy-relevant research that connects empirical analysis with real-world governance challenges.
+          </p>
+          <p style={{ fontSize: '1.05rem', lineHeight: '1.9', color: 'var(--text-muted)', fontStyle: 'italic' }}>
+            This website presents a collection of his publications, policy contributions, and analytical work.
           </p>
         </div>
 
