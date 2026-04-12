@@ -6,12 +6,13 @@ import Fuse from 'fuse.js';
 
 interface ArchiveHubProps {
     initialPublications: Publication[];
+    defaultType?: string;
 }
 
-export default function ArchiveHub({ initialPublications }: ArchiveHubProps) {
+export default function ArchiveHub({ initialPublications, defaultType = 'All Types' }: ArchiveHubProps) {
   const [search, setSearch] = useState('');
   const [activeTopic, setActiveTopic] = useState('All Topics');
-  const [activeType, setActiveType] = useState('All Types');
+  const [activeType, setActiveType] = useState(defaultType);
   const [filtered, setFiltered] = useState<Publication[]>(initialPublications);
 
   const topics = [
