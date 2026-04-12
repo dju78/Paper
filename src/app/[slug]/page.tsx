@@ -95,6 +95,31 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           </div>
           <h1 style={{ fontSize: '2.5rem', marginBottom: '1.5rem', lineHeight: '1.2' }}>{pub.title}</h1>
 
+          {/* Author block — visible on page and indexed by search engines */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', marginBottom: '2rem', paddingBottom: '1.5rem', borderBottom: '1px solid var(--border)', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+              <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: '700', fontSize: '0.9rem', flexShrink: 0 }}>
+                JD
+              </div>
+              <div>
+                <div style={{ fontWeight: '700', fontSize: '1rem', color: 'var(--text-main)' }}>
+                  <a href="/about" style={{ color: 'inherit', textDecoration: 'none' }}>Daramola Joseph Omoyele</a>
+                </div>
+                <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>
+                  Economist &amp; Senior Data Analyst ·{' '}
+                  <a href="https://orcid.org/0009-0006-0347-0499" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent)' }}>
+                    ORCID: 0009-0006-0347-0499
+                  </a>
+                </div>
+              </div>
+            </div>
+            {pub.journal && (
+              <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)', borderLeft: '1px solid var(--border)', paddingLeft: '1.5rem' }}>
+                <span style={{ fontWeight: '600' }}>Published in: </span>{pub.journal}
+              </div>
+            )}
+          </div>
+
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '2rem' }}>
             {pub.doi && (
               <a href={`https://doi.org/${pub.doi}`} target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ fontSize: '0.9rem' }}>
