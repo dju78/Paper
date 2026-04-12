@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { getAllPublications } from '../../lib/publications';
 
 export const metadata: Metadata = {
   title: 'About | Daramola Joseph Omoyele',
@@ -39,7 +40,9 @@ const personJsonLd = {
   ],
 };
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const publications = await getAllPublications();
+
   return (
     <>
       <script
@@ -50,18 +53,21 @@ export default function AboutPage() {
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           <h1 style={{ fontSize: '3rem', marginBottom: '0.5rem' }}>Daramola Joseph Omoyele</h1>
           <p style={{ color: 'var(--accent)', fontWeight: '600', fontSize: '1.1rem', marginBottom: '3rem' }}>
-            Economist · Senior Data Analyst · Regulatory &amp; Policy Analytics Specialist
+            Economist · Chartered Accountant · Senior Data Analyst · Regulatory &amp; Policy Analytics Specialist
           </p>
 
           <section style={{ marginBottom: '4rem' }}>
             <p className="lead" style={{ marginBottom: '1.5rem' }}>
-              Joseph Omoyele Daramola is a distinguished <strong>Economist and Senior Data Analyst</strong> with over 15 years of professional experience spanning regulatory compliance, applied econometrics, and digital governance.
+              Daramola Joseph Omoyele is an economist, Chartered Accountant, and senior data analyst whose work sits at the intersection of applied economics, public policy, and regulatory governance. His research focuses on how administrative systems, institutional design, and compliance structures shape economic behaviour, policy implementation, and state effectiveness.
             </p>
             <p style={{ marginBottom: '1.5rem', lineHeight: '1.9' }}>
-              Currently serving as a Finance &amp; Economic Analyst at Univelcity Consulting (UK), he delivers economic analysis for donor-funded development programmes, builds automated dashboards, and leads data governance aligned with GDPR and international standards. His work integrates advanced econometric modelling across GBP, USD, EUR, and NGN environments for regulatory and policy clients.
+              He currently works in the private sector with Univelcity Consulting in the United Kingdom, where he contributes to data-driven analysis, reporting systems, dashboard development, and governance-focused analytics. His work emphasises data quality, analytical rigour, and the production of practical insight for decision-makers operating in complex policy and operational environments.
+            </p>
+            <p style={{ marginBottom: '1.5rem', lineHeight: '1.9' }}>
+              Before this, he developed substantial experience in the public service, where he worked on financial analysis, policy reporting, performance assessment, and administrative data improvement. These roles strengthened his interest in institutional performance, compliance systems, public accountability, and the practical realities of governance.
             </p>
             <p style={{ lineHeight: '1.9' }}>
-              Prior to his current role, Joseph served as a Financial &amp; Economic Data Analyst at the Office of the Accountant General of Nigeria, where he evaluated fiscal policy performance, delivered impact assessments, and produced senior-level policy briefings — reducing reporting cycles by 35%.
+              His broader academic and professional interests include development economics, tax administration, digital governance, applied econometrics, and institutional reform. Across both research and practice, he is committed to evidence-based work that connects quantitative analysis with real-world policy challenges.
             </p>
           </section>
 
@@ -87,15 +93,11 @@ export default function AboutPage() {
           <section style={{ marginBottom: '4rem' }}>
             <h2 style={{ marginBottom: '1.5rem', color: 'var(--primary)', fontSize: '1.6rem' }}>Selected Publication Highlights</h2>
             <ul style={{ listStyle: 'none', padding: 0 }}>
-              {[
-                { label: 'Digital Tax Reform', desc: 'Introduced the concept of Behavioural Reporting Noise (BRN) to explain compliance distortions under the UK Making Tax Digital regime (WJARR, 2026).', slug: 'behavioural-reporting-noise-tax' },
-                { label: 'Institutional Economics', desc: 'Seminal analysis of religion as an economic institution in Sub-Saharan Africa and its long-run development implications (WJARR, 2026).', slug: 'religion-economic-institution' },
-                { label: 'Electoral Policy', desc: "Empirical evidence on how administrative barriers suppress voter participation in Nigeria\u2019s 2023 Presidential Election (African Studies Quarterly, 2026).", slug: 'administrative-barriers-electoral-participation' },
-                { label: 'State Capacity', desc: "Examined interoperability failures in Nigeria\u2019s digital identification infrastructure and their impact on administrative reach (IJDES, 2026).", slug: 'administrative-reach-state-capacity' },
-              ].map(item => (
-                <li key={item.slug} style={{ padding: '1.5rem 0', borderBottom: '1px solid var(--border)' }}>
-                  <strong>{item.label}: </strong>{item.desc}{' '}
-                  <a href={`/${item.slug}`} style={{ color: 'var(--primary)', fontSize: '0.9rem' }}>Read →</a>
+              {publications.map(pub => (
+                <li key={pub.slug} style={{ padding: '1.5rem 0', borderBottom: '1px solid var(--border)' }}>
+                  <div style={{ fontWeight: '600', fontSize: '1.05rem', marginBottom: '0.25rem' }}>{pub.title}</div>
+                  <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginBottom: '0.5rem' }}>{pub.type} • {pub.year} {pub.journal ? `• ${pub.journal}` : ''}</div>
+                  <a href={`/${pub.slug}`} style={{ color: 'var(--primary)', fontSize: '0.9rem', fontWeight: '500' }}>Read Publication →</a>
                 </li>
               ))}
             </ul>
