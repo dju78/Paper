@@ -1,7 +1,7 @@
 ---
 title: "The Altar of Accountability: A Public-Interest Examination of Institutional Religion, Accountability, and Social Justice"
 year: 2026
-type: "Book"
+type: "Books / Handbooks"
 journal: "Independently Published"
 doi: ""
 external_url: "https://www.amazon.com/dp/B0GL37765P"

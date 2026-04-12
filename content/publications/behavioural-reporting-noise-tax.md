@@ -1,7 +1,7 @@
 ---
 title: "Behavioural reporting noise in digital tax administration: Compliance signal distortions under the UK making tax digital for income tax regime"
 year: 2026
-type: "Journal Article"
+type: "Journal Articles"
 journal: "World Journal of Advanced Research and Reviews (Vol. 29, Issue 3)"
 doi: "10.30574/wjarr.2026.29.3.0785"
 topics: ["Tax Administration and Compliance", "Digital Governance", "UK Policy and Administrative Reform"]

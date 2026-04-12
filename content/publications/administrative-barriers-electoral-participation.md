@@ -1,7 +1,7 @@
 ---
 title: "Administrative Barriers and Electoral Participation: Evidence from Nigeria’s 2023 Presidential Election"
 year: 2026
-type: "Journal Article"
+type: "Journal Articles"
 journal: "African Studies Quarterly (Vol. 24, Issue 2)"
 doi: "10.32473/asq.24.2"
 topics: ["Electoral Politics", "Public Policy", "Nigeria Governance Studies"]

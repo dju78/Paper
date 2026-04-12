@@ -18,7 +18,7 @@ collections:
           label: "Type", 
           name: "type", 
           widget: "select", 
-          options: ["Journal Article", "Working Paper", "Policy Paper", "Book", "Article"] 
+          options: ["Journal Articles", "Working Papers / Preprints", "Books / Handbooks", "Articles & Essays"] 
         }
       - { label: "Journal / Publisher", name: "journal", widget: "string", required: false }
       - { label: "DOI", name: "doi", widget: "string", required: false }

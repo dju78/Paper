@@ -1,7 +1,7 @@
 ---
 title: "Asymmetric and time-frequency effects of insecurity and macroeconomic dynamics on economic growth in Nigeria"
 year: 2026
-type: "Working Paper"
+type: "Working Papers / Preprints"
 journal: "Research Square (Preprint)"
 doi: "10.21203/rs.3.rs-8864569/v1"
 topics: ["Economic Analysis", "Governance and State Capacity", "Nigeria Governance Studies"]

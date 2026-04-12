@@ -1,7 +1,7 @@
 ---
 title: "How HMRC Really Selects Businesses for Investigation: The Hidden Triggers, Risk Signals, and Tax Mistakes That Put UK SMEs on HMRC's Radar"
 year: 2026
-type: "Book"
+type: "Books / Handbooks"
 journal: "Independently Published"
 doi: ""
 external_url: "https://www.amazon.com/dp/B0GL1YXHBT"

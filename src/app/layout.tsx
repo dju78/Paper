@@ -36,7 +36,7 @@ export default function RootLayout({
             <nav style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
               <a href="/" style={{ fontSize: '0.95rem', fontWeight: '500' }}>Home</a>
               <a href="/about" style={{ fontSize: '0.95rem', fontWeight: '500' }}>About</a>
-              <a href="/papers" style={{ fontSize: '0.95rem', fontWeight: '500' }}>Papers</a>
+              <a href="/publications" style={{ fontSize: '0.95rem', fontWeight: '500' }}>Publications</a>
               <a href="/articles" style={{ fontSize: '0.95rem', fontWeight: '500' }}>Articles</a>
               <a href="https://daramolajo.co.uk" target="_blank" className="btn-outline" style={{ padding: '0.5rem 1rem', fontSize: '0.9rem' }}>Portfolio</a>
             </nav>

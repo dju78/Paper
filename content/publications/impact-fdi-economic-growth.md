@@ -1,7 +1,7 @@
 ---
 title: "Impact of Foreign Direct Investment on Economic Growth in Sub-Sahara Africa Countries"
 year: 2026
-type: "Journal Article"
+type: "Journal Articles"
 journal: "Haut (Vol. 24, Issue 4)"
 doi: "10.5281/zenodo.19471039"
 topics: ["Development Economics", "Political Economy", "Financial Reporting and Economic Analysis"]

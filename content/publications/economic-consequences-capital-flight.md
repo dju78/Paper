@@ -1,7 +1,7 @@
 ---
 title: "Economic Consequences of Capital Flight in Nigeria: Evidence from an Economic Linkages Framework"
 year: 2026
-type: "Journal Article"
+type: "Journal Articles"
 journal: "International Journal of Development and Economic Sustainability (Vol. 14, Issue 1)"
 doi: "10.37745/ijdes.13/vol14n14560"
 topics: ["Political Economy", "Development Economics", "Financial Reporting and Economic Analysis"]

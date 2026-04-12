@@ -1,7 +1,7 @@
 ---
 title: "Administrative Reach and State Capacity: Interoperability Failures in Nigeria's Digital Identification Infrastructure"
 year: 2026
-type: "Journal Article"
+type: "Journal Articles"
 journal: "International Journal of Development and Economic Sustainability (Vol. 14, Issue 3)"
 doi: "10.37745/ijdes.13/vol14n13344"
 topics: ["Digital Governance", "Governance and State Capacity", "Nigeria Governance Studies"]

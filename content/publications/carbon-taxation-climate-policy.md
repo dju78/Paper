@@ -1,7 +1,7 @@
 ---
 title: "Carbon Taxation and Climate Policy in the United Kingdom: The Coverage Problem in UK Net-Zero Policy Architecture"
 year: 2026
-type: "Journal Article"
+type: "Journal Articles"
 journal: "British Journal of Environmental Studies (Vol. 14, Issue 1)"
 doi: "10.37745/bjes.2013/vol14n15982"
 topics: ["Public Policy", "UK Policy and Administrative Reform", "Digital Governance"]

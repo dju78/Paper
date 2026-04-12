@@ -2,7 +2,7 @@
 title: "Religion as an Economic Institution in Sub-Saharan Africa"
 author: "Daramola Joseph Omoyele"
 year: 2026
-type: "Journal Article"
+type: "Journal Articles"
 journal: "World Journal of Advanced Research and Reviews"
 doi: "10.30574/wjarr.2026.29.1.0134"
 topics: ["Nigeria Governance Studies", "Development Economics", "Political Economy"]

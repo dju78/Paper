@@ -1,7 +1,7 @@
 ---
 title: "Nigerian SME Tax Compliance and Investigation Handbook: How Business Owners, Accountants and Startups Can Handle Tax Queries, Audits and Assessments in Nigeria"
 year: 2026
-type: "Book"
+type: "Books / Handbooks"
 journal: "Independently Published"
 doi: ""
 external_url: "https://www.amazon.com/dp/B0GNML97C6"

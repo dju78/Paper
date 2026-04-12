@@ -7,13 +7,20 @@ import Fuse from 'fuse.js';
 interface ArchiveHubProps {
     initialPublications: Publication[];
     defaultType?: string;
+    allowedTypes?: string[];
 }
 
-export default function ArchiveHub({ initialPublications, defaultType = 'All Types' }: ArchiveHubProps) {
+
+export default function ArchiveHub({ initialPublications, defaultType = 'All Types', allowedTypes }: ArchiveHubProps) {
   const [search, setSearch] = useState('');
   const [activeTopic, setActiveTopic] = useState('All Topics');
   const [activeType, setActiveType] = useState(defaultType);
-  const [filtered, setFiltered] = useState<Publication[]>(initialPublications);
+  
+  const basePublications = allowedTypes 
+    ? initialPublications.filter(p => allowedTypes.includes(p.type)) 
+    : initialPublications;
+
+  const [filtered, setFiltered] = useState<Publication[]>(basePublications);
 
   const topics = [
     'All Topics',
@@ -32,10 +39,11 @@ export default function ArchiveHub({ initialPublications, defaultType = 'All Typ
     'UK Policy and Administrative Reform'
   ];
 
-  const types = ['All Types', 'Journal Article', 'Working Paper', 'Policy Paper', 'Book', 'Article'];
+  const predefinedTypes = ['Journal Articles', 'Working Papers / Preprints', 'Books / Handbooks', 'Articles & Essays'];
+  const types = ['All Types', ...(allowedTypes || predefinedTypes)];
 
   useEffect(() => {
-    let result = initialPublications;
+    let result = basePublications;
 
     if (activeTopic !== 'All Topics') {
       result = result.filter(p => p.topics.includes(activeTopic));
@@ -54,7 +62,7 @@ export default function ArchiveHub({ initialPublications, defaultType = 'All Typ
     }
 
     setFiltered(result);
-  }, [search, activeTopic, activeType, initialPublications]);
+  }, [search, activeTopic, activeType, allowedTypes, initialPublications]);
 
   return (
     <div>

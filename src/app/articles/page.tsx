@@ -14,7 +14,11 @@ export default async function ArticlesPage() {
         </p>
       </header>
       
-      <ArchiveHub initialPublications={publications} defaultType="Article" />
+      <ArchiveHub 
+        initialPublications={publications} 
+        allowedTypes={['Articles & Essays']} 
+        defaultType="All Types" 
+      />
     </div>
   );
 }

@@ -49,7 +49,10 @@ export default async function Page() {
           </p>
         </div>
 
-        <ArchiveHub initialPublications={publications} />
+        <ArchiveHub 
+          initialPublications={publications} 
+          allowedTypes={['Journal Articles', 'Working Papers / Preprints', 'Books / Handbooks']} 
+        />
       </div>
     </>
   );
