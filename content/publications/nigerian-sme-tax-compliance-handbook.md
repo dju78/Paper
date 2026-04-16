@@ -4,6 +4,7 @@ year: 2026
 type: "Books / Handbooks"
 journal: "Independently Published"
 doi: ""
+cover_image: "/papers/sme_cover.png"
 external_url: "https://www.amazon.com/dp/B0GNML97C6"
 topics: ["Tax Administration and Compliance", "Nigeria Governance Studies", "Public Policy"]
 citation_apa: "Daramola, J.O. (2026). Nigerian SME Tax Compliance and Investigation Handbook: How Business Owners, Accountants and Startups Can Handle Tax Queries, Audits and Assessments in Nigeria. Independently Published. ISBN: 9798248507344."

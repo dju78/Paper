@@ -4,6 +4,7 @@ year: 2026
 type: "Books / Handbooks"
 journal: "Independently Published"
 doi: ""
+cover_image: "/papers/hmrc_cover.png"
 external_url: "https://www.amazon.com/dp/B0GL1YXHBT"
 topics: ["Tax Administration and Compliance", "UK Policy and Administrative Reform", "Digital Governance"]
 citation_apa: "Daramola, J.O. (2026). How HMRC Really Selects Businesses for Investigation: The Hidden Triggers, Risk Signals, and Tax Mistakes That Put UK SMEs on HMRC's Radar. Independently Published. ISBN: 979-8246539712."

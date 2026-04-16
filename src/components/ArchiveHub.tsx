@@ -46,7 +46,7 @@ export default function ArchiveHub({ initialPublications, defaultType = 'All Typ
     let result = basePublications;
 
     if (activeTopic !== 'All Topics') {
-      result = result.filter(p => p.topics.includes(activeTopic));
+      result = result.filter(p => p.topics?.includes(activeTopic));
     }
 
     if (activeType !== 'All Types') {
@@ -118,7 +118,7 @@ export default function ArchiveHub({ initialPublications, defaultType = 'All Typ
               {pub.abstract}
             </p>
             <div style={{ marginTop: '1.5rem', display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
-              {pub.topics.slice(0, 2).map(topic => (
+              {pub.topics?.slice(0, 2).map(topic => (
                 <span key={topic} style={{ padding: '0.2rem 0.6rem', background: '#F1F5F9', borderRadius: '4px', fontSize: '0.75rem', color: 'var(--text-muted)' }}>
                   {topic}
                 </span>

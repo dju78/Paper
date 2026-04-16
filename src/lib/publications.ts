@@ -12,6 +12,7 @@ export interface Publication {
   year: number;
   type: string;
   topics: string[];
+  cover_image?: string;
   doi?: string;
   journal?: string;
   pdf?: string;

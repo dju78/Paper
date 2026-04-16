@@ -4,6 +4,7 @@ title: "Health Expenditure and Life Expectancy: Cross-Country Panel Evidence on
 year: 2026
 type: Working Papers / Preprints
 pdf: /papers/manuscript_v6_final.pdf
+topics: ["Development Economics", "Political Economy"]
 abstract: This paper revisits the relationship between health expenditure and
   life expectancy by distinguishing between cross-country moderation patterns
   and within-country temporal evidence. Using cross-sectional data for 111

@@ -4,6 +4,7 @@ year: 2026
 type: "Books / Handbooks"
 journal: "Independently Published"
 doi: ""
+cover_image: "/papers/altar_cover.png"
 external_url: "https://www.amazon.com/dp/B0GL37765P"
 topics: ["Political Economy", "Nigeria Governance Studies", "Governance and State Capacity"]
 citation_apa: "Daramola, J.O. (2026). The Altar of Accountability: A Public-Interest Examination of Institutional Religion, Accountability, and Social Justice. Independently Published. ISBN: 979-8246609675."

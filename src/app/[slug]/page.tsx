@@ -90,6 +90,15 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         </a>
 
         <div style={{ marginBottom: '3rem' }}>
+          {pub.cover_image && (
+            <div style={{ marginBottom: '2rem' }}>
+              <img 
+                src={pub.cover_image} 
+                alt={`Cover of ${pub.title}`} 
+                style={{ maxWidth: '250px', height: 'auto', borderRadius: '8px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }} 
+              />
+            </div>
+          )}
           <div style={{ color: 'var(--accent)', fontWeight: '600', marginBottom: '1rem' }}>
             {pub.type} • {pub.year}
           </div>
@@ -133,7 +142,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             )}
             {pub.external_url && (
               <a href={pub.external_url} target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ fontSize: '0.9rem' }}>
-                View Publication
+                {pub.type === 'Books / Handbooks' ? 'Buy on Amazon' : 'View Publication'}
               </a>
             )}
           </div>

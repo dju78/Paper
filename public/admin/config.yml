@@ -49,6 +49,7 @@ collections:
           } 
         }
       - { label: "Downloadable PDF", name: "pdf", widget: "file", required: false }
+      - { label: "Cover Image", name: "cover_image", widget: "image", required: false }
       - { label: "External URL", name: "external_url", widget: "string", required: false }
       - { label: "APA Citation", name: "citation_apa", widget: "text", required: false }
       - { label: "BibTeX Citation", name: "citation_bibtex", widget: "text", required: false }
