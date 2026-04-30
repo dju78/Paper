@@ -7,9 +7,8 @@ journal: Journal of Investment, Banking and Finance
 doi: 10.33140/JIBF
 pdf: /papers/preventing-delayed-overseas-income-disclosure-among-new-uk-tax-residents-a-behaviourally-informed-policy-proposal.pdf
 external_url: https://www.opastpublishers.com/journal/journal-of-investment-banking-and-finance
-citation_apa: "Omoyele, D. J. (2026). Preventing Delayed Overseas Income
-  Disclosure Among New Uk Tax Residents: A Behaviourally Informed Policy
-  Proposal. J Invest Bank Finance, 4(1), 01–10."
+citation_apa: "D.J. Omoyele (2026). Preventing Delayed Overseas Income Disclosure Among New Uk Tax Residents: A Behaviourally Informed Policy Proposal. J Invest Bank Finance, 4(1), 01–10."
+citation_bibtex: "@article{djomoyele2026overseas,\n  title={Preventing Delayed Overseas Income Disclosure Among New Uk Tax Residents: A Behaviourally Informed Policy Proposal},\n  author={D.J. Omoyele},\n  journal={Journal of Investment, Banking and Finance},\n  volume={4},\n  number={1},\n  pages={01--10},\n  year={2026},\n  doi={10.33140/JIBF}\n}"
 abstract: >-
   This paper examines delayed overseas income disclosure among new UK tax
   residents and proposes a Residency 
