@@ -10,6 +10,7 @@ collections:
     label: "Publications"
     folder: "content/publications"
     create: true
+    delete: true
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
