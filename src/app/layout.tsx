@@ -3,18 +3,18 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://omoyelejd.co.uk'),
-  title: 'Publications | D.J. Omoyele',
-  description: 'Academic repository and research portfolio of D.J. Omoyele. Explore research on digital governance, tax policy, and development economics.',
+  title: 'Publications | Daramola Joseph Omoyele',
+  description: 'Academic repository and research portfolio of Daramola Joseph Omoyele. Explore research on digital governance, tax policy, and development economics.',
   openGraph: {
-    title: 'Research & Publications | D.J. Omoyele',
+    title: 'Research & Publications | Daramola Joseph Omoyele',
     description: 'Academic repository and research portfolio focused on Digital Governance, Tax Policy, and Political Economy.',
     url: 'https://omoyelejd.co.uk',
-    siteName: 'D.J. Omoyele Publications',
+    siteName: 'Daramola Joseph Omoyele Publications',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Research & Publications | D.J. Omoyele',
+    title: 'Research & Publications | Daramola Joseph Omoyele',
     description: 'Academic archive and research portfolio.',
   },
 }
@@ -32,7 +32,7 @@ export default function RootLayout({
       <body>
         <header>
           <div className="container nav-content">
-            <a href="/" className="logo">D.J. Omoyele</a>
+            <a href="/" className="logo">Daramola Joseph Omoyele</a>
             <nav style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
               <a href="/" style={{ fontSize: '0.95rem', fontWeight: '500' }}>Home</a>
               <a href="/about" style={{ fontSize: '0.95rem', fontWeight: '500' }}>About</a>
@@ -46,7 +46,7 @@ export default function RootLayout({
         </main>
         <footer style={{ background: 'white', padding: '3rem 0', borderTop: '1px solid var(--border)', textAlign: 'center' }}>
           <div className="container">
-            <p className="text-muted">© 2026 D.J. Omoyele. All rights reserved.</p>
+            <p className="text-muted">© 2026 Daramola Joseph Omoyele. All rights reserved.</p>
           </div>
         </footer>
       </body>

@@ -16,12 +16,12 @@ export async function generateMetadata(
   const pub = await getPublicationData(slug);
   const description = pub.abstract
     ? pub.abstract.slice(0, 160).replace(/\n/g, ' ')
-    : `Read ${pub.title} by D.J. Omoyele.`;
+    : `Read ${pub.title} by Daramola Joseph Omoyele.`;
 
   return {
-    title: `${pub.title} | D.J. Omoyele`,
+    title: `${pub.title} | Daramola Joseph Omoyele`,
     description,
-    authors: [{ name: 'D.J. Omoyele' }],
+    authors: [{ name: 'Daramola Joseph Omoyele' }],
     alternates: { canonical: `${BASE_URL}/${slug}` },
     openGraph: {
       title: pub.title,
@@ -29,7 +29,7 @@ export async function generateMetadata(
       url: `${BASE_URL}/${slug}`,
       type: 'article',
       publishedTime: `${pub.year}-01-01`,
-      authors: ['D.J. Omoyele'],
+      authors: ['Daramola Joseph Omoyele'],
     },
     twitter: {
       card: 'summary_large_image',
@@ -48,7 +48,7 @@ function ScholarlyArticleJsonLd({ pub }: { pub: Publication }) {
     abstract: pub.abstract,
     author: {
       '@type': 'Person',
-      name: 'D.J. Omoyele',
+      name: 'Daramola Joseph Omoyele',
       url: 'https://daramolajo.co.uk',
       sameAs: ['https://orcid.org/0009-0006-0347-0499'],
     },
@@ -112,7 +112,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
               </div>
               <div>
                 <div style={{ fontWeight: '700', fontSize: '1rem', color: 'var(--text-main)' }}>
-                  <a href="/about" style={{ color: 'inherit', textDecoration: 'none' }}>D.J. Omoyele</a>
+                  <a href="/about" style={{ color: 'inherit', textDecoration: 'none' }}>Daramola Joseph Omoyele</a>
                 </div>
                 <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>
                   Economist &amp; Senior Data Analyst ·{' '}
