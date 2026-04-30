@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import { getAllPublications } from '../../lib/publications';
 
 export const metadata: Metadata = {
-  title: 'About | Daramola Joseph Omoyele',
-  description: 'Learn about Daramola Joseph Omoyele — Economist and Senior Data Analyst with 15+ years of experience in applied econometrics, digital governance, and public policy.',
+  title: 'About | D.J. Omoyele',
+  description: 'Learn about D.J. Omoyele — Economist and Senior Data Analyst with 15+ years of experience in applied econometrics, digital governance, and public policy.',
   alternates: { canonical: 'https://omoyelejd.co.uk/about' },
   openGraph: {
-    title: 'About Daramola Joseph Omoyele',
+    title: 'About D.J. Omoyele',
     description: 'Economist and Senior Data Analyst specialising in digital governance, tax administration, and development economics.',
     url: 'https://omoyelejd.co.uk/about',
     type: 'profile',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const personJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
-  name: 'Daramola Joseph Omoyele',
+  name: 'D.J. Omoyele',
   url: 'https://omoyelejd.co.uk',
   sameAs: [
     'https://daramolajo.co.uk',
@@ -51,14 +51,14 @@ export default async function AboutPage() {
       />
       <div className="container" style={{ padding: '5rem 0' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-          <h1 style={{ fontSize: '3rem', marginBottom: '0.5rem' }}>Daramola Joseph Omoyele</h1>
+          <h1 style={{ fontSize: '3rem', marginBottom: '0.5rem' }}>D.J. Omoyele</h1>
           <p style={{ color: 'var(--accent)', fontWeight: '600', fontSize: '1.1rem', marginBottom: '3rem' }}>
             Economist · Chartered Accountant · Senior Data Analyst · Regulatory &amp; Policy Analytics Specialist
           </p>
 
           <section style={{ marginBottom: '4rem' }}>
             <p className="lead" style={{ marginBottom: '1.5rem' }}>
-              Daramola Joseph Omoyele is an economist, Chartered Accountant, and senior data analyst whose work sits at the intersection of applied economics, public policy, and regulatory governance. His research focuses on how administrative systems, institutional design, and compliance structures shape economic behaviour, policy implementation, and state effectiveness.
+              D.J. Omoyele is an economist, Chartered Accountant, and senior data analyst whose work sits at the intersection of applied economics, public policy, and regulatory governance. His research focuses on how administrative systems, institutional design, and compliance structures shape economic behaviour, policy implementation, and state effectiveness.
             </p>
             <p style={{ marginBottom: '1.5rem', lineHeight: '1.9' }}>
               He currently works in the private sector with Univelcity Consulting in the United Kingdom, where he contributes to data-driven analysis, reporting systems, dashboard development, and governance-focused analytics. His work emphasises data quality, analytical rigour, and the production of practical insight for decision-makers operating in complex policy and operational environments.
