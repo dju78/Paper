@@ -14,6 +14,8 @@ const websiteJsonLd = {
     sameAs: [
       'https://daramolajo.co.uk',
       'https://orcid.org/0009-0006-0347-0499',
+      'https://scholar.google.co.uk/citations?user=gw0w3s4AAAAJ&hl=en',
+      'https://www.linkedin.com/in/daramola-omoyele-bbb006244/',
       'https://github.com/dju78'
     ],
     jobTitle: 'Economist & Senior Data Analyst',

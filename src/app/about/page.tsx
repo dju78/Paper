@@ -21,6 +21,8 @@ const personJsonLd = {
   sameAs: [
     'https://daramolajo.co.uk',
     'https://orcid.org/0009-0006-0347-0499',
+    'https://scholar.google.co.uk/citations?user=gw0w3s4AAAAJ&hl=en',
+    'https://www.linkedin.com/in/daramola-omoyele-bbb006244/',
     'https://github.com/dju78',
   ],
   jobTitle: 'Economist & Senior Data Analyst',
@@ -110,8 +112,8 @@ export default async function AboutPage() {
                 { label: 'Email', value: 'dju78@omoyelejd.co.uk', href: 'mailto:dju78@omoyelejd.co.uk', isButton: true },
                 { label: 'Portfolio', value: 'daramolajo.co.uk', href: 'https://daramolajo.co.uk' },
                 { label: 'ORCID', value: '0009-0006-0347-0499', href: 'https://orcid.org/0009-0006-0347-0499' },
-                { label: 'Google Scholar', value: '[LINK_PENDING]', href: '#' },
-                { label: 'LinkedIn', value: '[LINK_PENDING]', href: '#' },
+                { label: 'Google Scholar', value: 'D.J. Omoyele', href: 'https://scholar.google.co.uk/citations?user=gw0w3s4AAAAJ&hl=en' },
+                { label: 'LinkedIn', value: 'daramola-omoyele', href: 'https://www.linkedin.com/in/daramola-omoyele-bbb006244/' },
                 { label: 'Location', value: 'Colchester, Essex, United Kingdom', href: null },
               ].map(({ label, value, href, isButton }) => (
                 <div key={label} style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
