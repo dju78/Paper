@@ -10,8 +10,18 @@ const websiteJsonLd = {
   author: {
     '@type': 'Person',
     name: 'Daramola Joseph Omoyele',
-    url: 'https://daramolajo.co.uk',
-    sameAs: ['https://orcid.org/0009-0006-0347-0499'],
+    url: 'https://omoyelejd.co.uk',
+    sameAs: [
+      'https://daramolajo.co.uk',
+      'https://orcid.org/0009-0006-0347-0499',
+      'https://github.com/dju78'
+    ],
+    jobTitle: 'Economist & Senior Data Analyst',
+    worksFor: {
+      '@type': 'Organization',
+      name: 'Univelcity Consulting',
+      address: { '@type': 'PostalAddress', addressCountry: 'GB' },
+    },
   },
   potentialAction: {
     '@type': 'SearchAction',
