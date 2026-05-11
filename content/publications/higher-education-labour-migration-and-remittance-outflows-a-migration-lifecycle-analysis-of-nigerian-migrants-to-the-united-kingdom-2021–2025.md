@@ -3,8 +3,18 @@ title: "Higher Education, Labour Migration, and Remittance Outflows: A Migration
   Lifecycle Analysis of Nigerian Migrants to the United Kingdom, 2021–2025"
 year: 2026
 type: Working Papers / Preprints
+journal: SocArXiv
 doi: 10.31219/osf.io/guzxs_v1
-pdf: https://ideas.repec.org/p/osf/socarx/guzxs_v1.html
+topics:
+  - Public Policy
+  - Migration and International Education
+  - UK Policy and Administrative Reform
+  - Nigeria Governance Studies
+pdf: ""
+external_url: https://ideas.repec.org/p/osf/socarx/guzxs_v1.html
+citation_apa: 'Omoyele, Daramola Joseph, 2026. "Higher Education, Labour
+  Migration, and Remittance Outflows: A Migration Lifecycle Analysis of Nigerian
+  Migrants to the United Kingdom, 2021–2025," SocArXiv guzxs_v1,'
 abstract: "The United Kingdom–Nigeria migration corridor has expanded
   substantially since 2021, generating significant public and policy debate in
   both countries. Existing scholarship tends to evaluate the economic impact of
