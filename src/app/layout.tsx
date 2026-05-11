@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://omoyelejd.co.uk'),
-  title: 'Publications | Daramola Joseph Omoyele',
+  title: 'Daramola Joseph Omoyele | Economist, Policy Researcher & Data Analyst',
   description: 'Academic repository and research portfolio of Daramola Joseph Omoyele. Explore research on digital governance, tax policy, and development economics.',
   openGraph: {
     title: 'Research & Publications | Daramola Joseph Omoyele',
