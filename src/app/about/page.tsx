@@ -29,7 +29,7 @@ const personJsonLd = {
     name: 'Univelcity Consulting',
     address: { '@type': 'PostalAddress', addressCountry: 'GB' },
   },
-  email: 'mailto:1978dju@gmail.com',
+  email: 'mailto:dju78@omoyelejd.co.uk',
   knowsAbout: [
     'Digital Governance',
     'Tax Administration and Compliance',
@@ -107,15 +107,23 @@ export default async function AboutPage() {
             <h2 style={{ marginBottom: '1.5rem', fontSize: '1.4rem' }}>Contact &amp; Connectivity</h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               {[
-                { label: 'Email', value: '1978dju@gmail.com', href: 'mailto:1978dju@gmail.com' },
+                { label: 'Email', value: 'dju78@omoyelejd.co.uk', href: 'mailto:dju78@omoyelejd.co.uk', isButton: true },
                 { label: 'Portfolio', value: 'daramolajo.co.uk', href: 'https://daramolajo.co.uk' },
                 { label: 'ORCID', value: '0009-0006-0347-0499', href: 'https://orcid.org/0009-0006-0347-0499' },
                 { label: 'Location', value: 'Colchester, Essex, United Kingdom', href: null },
-              ].map(({ label, value, href }) => (
+              ].map(({ label, value, href, isButton }) => (
                 <div key={label} style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
                   <span style={{ width: '100px', fontWeight: '700', color: 'var(--text-muted)', fontSize: '0.9rem' }}>{label}</span>
                   {href ? (
-                    <a href={href} target={href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer" style={{ color: 'var(--primary)', fontWeight: '500' }}>{value}</a>
+                    <a 
+                      href={href} 
+                      target={href.startsWith('http') ? '_blank' : undefined} 
+                      rel="noopener noreferrer" 
+                      style={isButton ? {} : { color: 'var(--primary)', fontWeight: '500' }}
+                      className={isButton ? 'btn btn-outline' : ''}
+                    >
+                      {value}
+                    </a>
                   ) : (
                     <span style={{ fontWeight: '500' }}>{value}</span>
                   )}
