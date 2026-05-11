@@ -49,7 +49,8 @@ export async function getAllPublications(): Promise<Publication[]> {
 }
 
 export async function getPublicationData(slug: string): Promise<Publication> {
-  const fullPath = path.join(publicationsDirectory, `${slug}.md`);
+  const decodedSlug = decodeURIComponent(slug);
+  const fullPath = path.join(publicationsDirectory, `${decodedSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
   const matterResult = matter(fileContents);
