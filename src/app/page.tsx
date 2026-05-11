@@ -59,10 +59,34 @@ export default async function Page() {
           </p>
         </div>
 
-        <ArchiveHub 
-          initialPublications={publications} 
-          allowedTypes={['Journal Articles', 'Working Papers / Preprints', 'Books / Handbooks']} 
-        />
+        <div style={{ marginBottom: '5rem' }}>
+          <h2 style={{ fontSize: '2rem', marginBottom: '2rem' }}>Recently Added</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '2rem' }}>
+            {publications.slice(0, 3).map((pub) => (
+              <a key={pub.slug} href={`/${pub.slug}`} className="card" style={{ display: 'block', textDecoration: 'none', color: 'inherit' }}>
+                <div style={{ marginBottom: '0.75rem', color: 'var(--accent)', fontWeight: '600', fontSize: '0.85rem' }}>
+                  {pub.type} • {pub.year}
+                </div>
+                <h3 style={{ fontSize: '1.25rem', marginBottom: '1rem', color: 'var(--text-main)', lineHeight: '1.3' }}>
+                  {pub.title}
+                </h3>
+                {pub.journal && (
+                  <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)', fontStyle: 'italic' }}>
+                    {pub.journal}
+                  </div>
+                )}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <h2 style={{ fontSize: '2rem', marginBottom: '2rem' }}>Full Archive</h2>
+          <ArchiveHub 
+            initialPublications={publications} 
+            allowedTypes={['Journal Articles', 'Working Papers / Preprints', 'Books / Handbooks']} 
+          />
+        </div>
       </div>
     </>
   );
