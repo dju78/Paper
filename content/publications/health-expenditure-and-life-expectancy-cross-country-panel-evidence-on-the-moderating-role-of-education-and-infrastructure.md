@@ -3,7 +3,9 @@ title: "Health Expenditure and Life Expectancy: Cross-Country Panel Evidence on
   the Moderating Role of Education and Infrastructure"
 year: 2026
 type: Working Papers / Preprints
-doi: 10.31219/osf.io/yr8bk_v1
+journal: SocArXiv
+doi: 10.31235/osf.io/yr8bk_v1
+external_url: https://osf.io/preprints/socarxiv/yr8bk_v1
 topics:
   - Development Economics
   - Political Economy
