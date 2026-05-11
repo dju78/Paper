@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { getAllPublications } from '../../lib/publications';
+import PublicationsChart from '../../components/PublicationsChart';
 
 export const metadata: Metadata = {
   title: 'About | Daramola Joseph Omoyele',
@@ -90,6 +91,11 @@ export default async function AboutPage() {
                 </div>
               ))}
             </div>
+          </section>
+
+          <section style={{ marginBottom: '4rem' }}>
+            <h2 style={{ marginBottom: '1.5rem', color: 'var(--primary)', fontSize: '1.6rem' }}>Research Output at a Glance</h2>
+            <PublicationsChart publications={publications} />
           </section>
 
           <section style={{ marginBottom: '4rem' }}>
