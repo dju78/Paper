@@ -13,8 +13,3 @@
     Content-Type = "application/pdf"
     Content-Disposition = "inline"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  condition = {role = ["admin"]} # Standard static fallback
