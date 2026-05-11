@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { getAllPublications } from '../../lib/publications';
 import PublicationsChart from '../../components/PublicationsChart';
+import scholarMetrics from '../../data/scholar_metrics.json';
 
 export const metadata: Metadata = {
   title: 'About | Daramola Joseph Omoyele',
@@ -72,6 +73,36 @@ export default async function AboutPage() {
             <p style={{ lineHeight: '1.9' }}>
               His broader academic and professional interests include development economics, tax administration, digital governance, applied econometrics, and institutional reform. Across both research and practice, he is committed to evidence-based work that connects quantitative analysis with real-world policy challenges.
             </p>
+          </section>
+
+          <section style={{ marginBottom: '4rem' }}>
+            <h2 style={{ marginBottom: '1.5rem', color: 'var(--primary)', fontSize: '1.6rem' }}>Research Metrics</h2>
+            { (scholarMetrics.citations > 0 || scholarMetrics.h_index > 0 || scholarMetrics.i10_index > 0) ? (
+              <>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1.5rem', marginBottom: '1rem' }}>
+                  {[
+                    { label: 'Citations', value: scholarMetrics.citations, desc: 'Total citations on Google Scholar' },
+                    { label: 'h-index', value: scholarMetrics.h_index, desc: 'Maximum value of h such that the author has published h papers that each have at least h citations' },
+                    { label: 'i10-index', value: scholarMetrics.i10_index, desc: 'Number of publications with at least 10 citations' },
+                  ].map((stat) => (
+                    <div 
+                      key={stat.label} 
+                      aria-label={stat.desc}
+                      style={{ padding: '1.5rem', background: 'white', border: '1px solid var(--border)', borderRadius: '8px', textAlign: 'center' }}
+                    >
+                      <div style={{ fontSize: '2.5rem', fontWeight: '800', color: 'var(--primary)', lineHeight: '1' }}>{stat.value}</div>
+                      <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginTop: '0.5rem', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{stat.label}</div>
+                    </div>
+                  ))}
+                </div>
+                <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>
+                  Source: <a href="https://scholar.google.co.uk/citations?user=gw0w3s4AAAAJ&hl=en" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)' }}>Google Scholar</a>
+                  <span style={{ marginLeft: '1rem' }}>Last updated: {scholarMetrics.last_updated}</span>
+                </div>
+              </>
+            ) : (
+              <p style={{ fontStyle: 'italic', color: 'var(--text-muted)' }}>Metrics temporarily unavailable</p>
+            )}
           </section>
 
           <section style={{ marginBottom: '4rem' }}>

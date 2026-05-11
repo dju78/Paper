@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build"
+  command = "pip install scholarly && python scripts/fetch_scholar_metrics.py && npm run build"
   publish = "out"
 
 [[headers]]
