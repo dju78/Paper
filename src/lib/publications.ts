@@ -15,6 +15,8 @@ export interface Publication {
   cover_image?: string;
   doi?: string;
   journal?: string;
+  volume?: string;
+  issue?: string;
   pdf?: string;
   external_url?: string;
   citation_bibtex?: string;

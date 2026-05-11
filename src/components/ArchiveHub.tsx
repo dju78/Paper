@@ -111,9 +111,25 @@ export default function ArchiveHub({ initialPublications, defaultType = 'All Typ
             <div style={{ marginBottom: '1rem', color: 'var(--accent)', fontWeight: '600', fontSize: '0.9rem' }}>
               {pub.type} • {pub.year}
             </div>
-            <h2 style={{ fontSize: '1.4rem', marginBottom: '1rem' }}>
+            <h2 style={{ fontSize: '1.4rem', marginBottom: '0.5rem' }}>
               <a href={`/${pub.slug}`}>{pub.title}</a>
             </h2>
+            {(pub.journal || pub.doi || pub.external_url) && (
+              <div style={{ fontSize: '0.85rem', marginBottom: '1rem', color: 'var(--text-main)', lineHeight: '1.4' }}>
+                {pub.journal && (
+                  <span style={{ fontStyle: 'italic' }}>
+                    {pub.journal}
+                    {(pub.volume || pub.issue) && `, ${pub.volume || ''}${pub.issue ? `(${pub.issue})` : ''}`}
+                  </span>
+                )}
+                {pub.journal && (pub.doi || pub.external_url) && ' • '}
+                {pub.doi ? (
+                  <a href={`https://doi.org/${pub.doi}`} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)' }}>DOI: {pub.doi}</a>
+                ) : pub.external_url ? (
+                  <a href={pub.external_url} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)' }}>View Resource</a>
+                ) : null}
+              </div>
+            )}
             <p className="text-muted" style={{ fontSize: '0.95rem', overflow: 'hidden', display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', flexGrow: 1 }}>
               {pub.abstract}
             </p>
