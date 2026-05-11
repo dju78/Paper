@@ -39,3 +39,40 @@ abstract: "The United Kingdom–Nigeria migration corridor has expanded
   corridor self-reproducing. Policy implications are drawn for both the United
   Kingdom's immigration framework and Nigeria's diaspora engagement strategy."
 ---
+\---
+
+title: "Higher Education, Labour Migration and Remittance Outflows: A Migration Lifecycle Analysis"
+
+year: "2026"
+
+type: "Working Papers / Preprints"
+
+publisher: "SSRN"
+
+externalUrl: ""
+
+topics:
+
+\- Migration and International Education
+
+\- Development Economics
+
+\- Public Policy
+
+apaCitation: "Omoyele, D. J. (2026). Higher education, labour migration and remittance outflows: A migration lifecycle analysis."
+
+bibtexCitation: ""
+
+abstract: "This paper examines the relationship between higher education, labour migration and remittance outflows within a migration lifecycle framework."
+
+\---
+
+
+
+This working paper examines how higher education, labour migration and remittance outflows interact within a migration lifecycle framework.
+
+
+
+\*\*Publication type:\*\* Working Paper / Preprint  
+
+\*\*Year:\*\* 2026
