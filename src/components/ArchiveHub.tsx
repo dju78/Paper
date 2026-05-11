@@ -90,7 +90,15 @@ export default function ArchiveHub({ initialPublications, defaultType = 'All Typ
           <select 
             value={activeType} 
             onChange={(e) => setActiveType(e.target.value)}
-            style={{ padding: '0.75rem', borderRadius: '6px', border: '1px solid var(--border)', background: 'white' }}
+            style={{ 
+              padding: '0.75rem', 
+              borderRadius: '6px', 
+              border: `1px solid ${activeType !== 'All Types' ? 'var(--primary)' : 'var(--border)'}`, 
+              background: activeType !== 'All Types' ? '#F0F9FF' : 'white',
+              color: activeType !== 'All Types' ? 'var(--primary)' : 'inherit',
+              fontWeight: activeType !== 'All Types' ? '600' : 'normal',
+              outline: 'none'
+            }}
           >
             {types.map(t => <option key={t} value={t}>{t}</option>)}
           </select>
@@ -98,7 +106,15 @@ export default function ArchiveHub({ initialPublications, defaultType = 'All Typ
           <select 
             value={activeTopic} 
             onChange={(e) => setActiveTopic(e.target.value)}
-            style={{ padding: '0.75rem', borderRadius: '6px', border: '1px solid var(--border)', background: 'white' }}
+            style={{ 
+              padding: '0.75rem', 
+              borderRadius: '6px', 
+              border: `1px solid ${activeTopic !== 'All Topics' ? 'var(--primary)' : 'var(--border)'}`, 
+              background: activeTopic !== 'All Topics' ? '#F0F9FF' : 'white',
+              color: activeTopic !== 'All Topics' ? 'var(--primary)' : 'inherit',
+              fontWeight: activeTopic !== 'All Topics' ? '600' : 'normal',
+              outline: 'none'
+            }}
           >
             {topics.map(t => <option key={t} value={t}>{t}</option>)}
           </select>
