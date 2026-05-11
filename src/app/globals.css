@@ -124,4 +124,27 @@ main {
   main {
     padding: 2rem 0;
   }
+  
+  .abstract-text:not(.expanded) {
+    -webkit-line-clamp: 3;
+  }
+}
+
+@media (min-width: 769px) {
+  .abstract-text {
+    -webkit-line-clamp: unset !important;
+    display: block !important;
+  }
+  .mobile-only-toggle {
+    display: none !important;
+  }
+}
+
+.abstract-text {
+  font-size: 0.95rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  flex-grow: 1;
+  margin-bottom: 0.5rem;
 }

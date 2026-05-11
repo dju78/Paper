@@ -15,7 +15,13 @@ export default function ArchiveHub({ initialPublications, defaultType = 'All Typ
   const [search, setSearch] = useState('');
   const [activeTopic, setActiveTopic] = useState('All Topics');
   const [activeType, setActiveType] = useState(defaultType);
-  
+  const [expandedAbstracts, setExpandedAbstracts] = useState<Record<string, boolean>>({});
+
+  const toggleAbstract = (slug: string, e: React.MouseEvent) => {
+    e.preventDefault();
+    setExpandedAbstracts(prev => ({ ...prev, [slug]: !prev[slug] }));
+  };
+
   const basePublications = allowedTypes 
     ? initialPublications.filter(p => allowedTypes.includes(p.type)) 
     : initialPublications;
@@ -146,9 +152,24 @@ export default function ArchiveHub({ initialPublications, defaultType = 'All Typ
                 ) : null}
               </div>
             )}
-            <p className="text-muted" style={{ fontSize: '0.95rem', overflow: 'hidden', display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', flexGrow: 1 }}>
-              {pub.abstract}
-            </p>
+            <div style={{ flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
+              <p className={`text-muted abstract-text ${expandedAbstracts[pub.slug] ? 'expanded' : ''}`}>
+                {pub.abstract}
+              </p>
+              <button 
+                className="mobile-only-toggle" 
+                onClick={(e) => toggleAbstract(pub.slug, e)}
+                style={{
+                  background: 'none', border: 'none', padding: 0,
+                  color: 'var(--text-muted)', fontSize: '0.85rem',
+                  textDecoration: 'underline', cursor: 'pointer',
+                  textAlign: 'left', marginBottom: '1rem',
+                  alignSelf: 'flex-start'
+                }}
+              >
+                {expandedAbstracts[pub.slug] ? 'Read less' : 'Read more'}
+              </button>
+            </div>
             <div style={{ marginTop: '1.5rem', display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
               {pub.topics?.slice(0, 2).map(topic => (
                 <span key={topic} style={{ padding: '0.2rem 0.6rem', background: '#F1F5F9', borderRadius: '4px', fontSize: '0.75rem', color: 'var(--text-muted)' }}>
