@@ -18,7 +18,7 @@ export default function CitationSection({ citation_apa, citation_bibtex, journal
   };
 
   return (
-    <div className="card" style={{ padding: '1.5rem', position: 'sticky', top: '100px' }}>
+    <div className="card" style={{ padding: '1.5rem' }}>
       <h3 style={{ fontSize: '1.1rem', marginBottom: '1rem' }}>Cite this work</h3>
       
       <div style={{ marginBottom: '1.5rem' }}>

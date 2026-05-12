@@ -103,8 +103,24 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
               />
             </div>
           )}
-          <div style={{ color: 'var(--accent)', fontWeight: '600', marginBottom: '1rem' }}>
-            {pub.type} • {pub.year}
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+            <div style={{ color: 'var(--accent)', fontWeight: '600' }}>
+              {pub.type} • {pub.year}
+            </div>
+            {pub.journal?.toLowerCase().includes('working draft') && (
+              <span style={{ 
+                padding: '0.3rem 0.75rem', 
+                background: 'var(--accent-light)', 
+                color: 'var(--accent)', 
+                fontSize: '0.8rem', 
+                fontWeight: 700, 
+                borderRadius: '6px',
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em'
+              }}>
+                Working Draft
+              </span>
+            )}
           </div>
           <h1 style={{ fontSize: '2.5rem', marginBottom: '1.5rem', lineHeight: '1.2' }}>{pub.title}</h1>
 
@@ -146,7 +162,9 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             )}
             {pub.external_url && (
               <a href={pub.external_url} target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ fontSize: '0.9rem' }}>
-                {pub.type === 'Books / Handbooks' ? 'Buy on Amazon' : 'View Publication'}
+                {pub.external_url.includes('zenodo') ? 'View on Zenodo' : 
+                 pub.external_url.includes('amazon') ? 'Buy on Amazon' : 
+                 'View Publication'}
               </a>
             )}
           </div>
@@ -169,7 +187,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             </div>
           </section>
 
-          <aside>
+          <aside style={{ position: 'sticky', top: '6rem', height: 'fit-content' }}>
             <CitationSection
               citation_apa={pub.citation_apa}
               citation_bibtex={pub.citation_bibtex}

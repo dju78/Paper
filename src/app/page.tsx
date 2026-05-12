@@ -1,5 +1,7 @@
 import { getAllPublications } from '../lib/publications';
 import ArchiveHub from '../components/ArchiveHub';
+import PublicationsChart from '../components/PublicationsChart';
+import ScholarMetrics from '../components/ScholarMetrics';
 
 const websiteJsonLd = {
   '@context': 'https://schema.org',
@@ -61,6 +63,23 @@ export default async function Page() {
           </p>
         </div>
 
+        {/* Impact Section */}
+        <div style={{ marginBottom: '5rem' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '2rem', flexWrap: 'wrap', gap: '1rem' }}>
+            <h2 style={{ fontSize: '2rem', margin: 0 }}>Research Impact</h2>
+            <a 
+              href="https://scholar.google.co.uk/citations?user=gw0w3s4AAAAJ&hl=en" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              style={{ fontSize: '0.9rem', fontWeight: 600, borderBottom: '1px solid var(--accent)' }}
+            >
+              View Google Scholar Profile →
+            </a>
+          </div>
+          <ScholarMetrics />
+          <PublicationsChart publications={publications} />
+        </div>
+
         <div style={{ marginBottom: '5rem' }}>
           <h2 style={{ fontSize: '2rem', marginBottom: '2rem' }}>Recently Added</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '2rem' }}>
@@ -93,3 +112,4 @@ export default async function Page() {
     </>
   );
 }
+
