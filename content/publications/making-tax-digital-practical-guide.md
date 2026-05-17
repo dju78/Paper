@@ -6,6 +6,7 @@ journal: "Independently Published"
 doi: ""
 cover_image: "/papers/mtd_book_cover.png"
 external_url: "https://www.amazon.co.uk/dp/B0H21N2W7T"
+youtube_url: "https://youtu.be/4S7Ns9Sa9tQ"
 topics: ["Tax Administration and Compliance", "UK Governance Studies", "Public Policy", "Digital Governance", "Making Tax Digital", "MTD-ITSA", "HMRC Self Assessment", "Tax Compliance", "UK Tax Administration", "Digital Tax Reform", "Self-Employed", "Landlords", "Quarterly Reporting", "Tax Gap", "Behavioural Tax Compliance", "UK Fiscal Policy"]
 citation_apa: "Omoyele, D. J. (2026). Making Tax Digital for Self-Employed Workers and Landlords: A Practical Guide to Avoiding Reporting Errors, Software Mistakes and HMRC Compliance Risks. Independently Published. ISBN: 979-8196895852."
 citation_bibtex: "@book{omoyele2026mtdbook,\n  title={Making Tax Digital for Self-Employed Workers and Landlords: A Practical Guide to Avoiding Reporting Errors, Software Mistakes and HMRC Compliance Risks},\n  author={Omoyele, D.J.},\n  year={2026},\n  publisher={Independently Published},\n  isbn={9798196895852},\n  asin={B0H21N2W7T}\n}"

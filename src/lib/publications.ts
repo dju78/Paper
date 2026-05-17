@@ -19,6 +19,7 @@ export interface Publication {
   issue?: string;
   pdf?: string;
   external_url?: string;
+  youtube_url?: string;
   citation_bibtex?: string;
   citation_apa?: string;
   abstract: string;

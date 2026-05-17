@@ -6,6 +6,7 @@ journal: "Independently Published"
 doi: ""
 cover_image: "/papers/hmrc_cover.png"
 external_url: "https://www.amazon.com/dp/B0GL1YXHBT"
+youtube_url: "https://youtu.be/jV4zl8WA3zQ"
 topics: ["Tax Administration and Compliance", "UK Policy and Administrative Reform", "Digital Governance"]
 citation_apa: "D.J. Omoyele (2026). How HMRC Really Selects Businesses for Investigation: The Hidden Triggers, Risk Signals, and Tax Mistakes That Put UK SMEs on HMRC's Radar. Independently Published. ISBN: 979-8246539712."
 citation_bibtex: "@book{djomoyele2026hmrc,\n  title={How HMRC Really Selects Businesses for Investigation},\n  author={D.J. Omoyele},\n  year={2026},\n  publisher={Independently Published},\n  isbn={9798246539712}\n}"

@@ -6,6 +6,7 @@ journal: "Independently Published"
 doi: ""
 cover_image: "/papers/sme_cover.png"
 external_url: "https://www.amazon.com/dp/B0GNML97C6"
+youtube_url: "https://youtu.be/4MkWNtx4NSM"
 topics: ["Tax Administration and Compliance", "Nigeria Governance Studies", "Public Policy"]
 citation_apa: "D.J. Omoyele (2026). Nigerian SME Tax Compliance and Investigation Handbook: How Business Owners, Accountants and Startups Can Handle Tax Queries, Audits and Assessments in Nigeria. Independently Published. ISBN: 9798248507344."
 citation_bibtex: "@book{djomoyele2026smetax,\n  title={Nigerian SME Tax Compliance and Investigation Handbook},\n  author={D.J. Omoyele},\n  year={2026},\n  publisher={Independently Published},\n  isbn={9798248507344},\n  asin={B0GNML97C6}\n}"

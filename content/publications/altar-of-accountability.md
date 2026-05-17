@@ -6,6 +6,7 @@ journal: "Independently Published"
 doi: ""
 cover_image: "/papers/altar_cover.png"
 external_url: "https://www.amazon.com/dp/B0GL37765P"
+youtube_url: "https://youtu.be/bbEXwYNJz20"
 topics: ["Political Economy", "Nigeria Governance Studies", "Governance and State Capacity"]
 citation_apa: "D.J. Omoyele (2026). The Altar of Accountability: A Public-Interest Examination of Institutional Religion, Accountability, and Social Justice. Independently Published. ISBN: 979-8246609675."
 citation_bibtex: "@book{djomoyele2026altar,\n  title={The Altar of Accountability: A Public-Interest Examination of Institutional Religion, Accountability, and Social Justice},\n  author={D.J. Omoyele},\n  year={2026},\n  publisher={Independently Published},\n  isbn={9798246609675}\n}"
