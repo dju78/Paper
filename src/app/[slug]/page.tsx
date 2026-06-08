@@ -95,7 +95,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
     <>
       <ScholarlyArticleJsonLd pub={pub} />
       <div className="container" style={{ maxWidth: '900px', padding: '4rem 0' }}>
-        <a href="/" style={{ display: 'inline-flex', alignItems: 'center', marginBottom: '2rem', color: 'var(--text-muted)', fontSize: '0.95rem' }}>
+        <a href="/" style={{ display: 'inline-flex', alignItems: 'center', marginBottom: '2rem', color: 'var(--text-muted)', fontSize: '0.95rem', textDecoration: 'underline' }}>
           ← Back to Archive
         </a>
 
@@ -138,11 +138,11 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
               </div>
               <div>
                 <div style={{ fontWeight: '700', fontSize: '1rem', color: 'var(--text-main)' }}>
-                  <a href="/about" style={{ color: 'inherit', textDecoration: 'none' }}>Daramola Joseph Omoyele</a>
+                  <a href="/about" style={{ color: 'inherit', textDecoration: 'underline' }}>Daramola Joseph Omoyele</a>
                 </div>
                 <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>
                   Economist &amp; Senior Data Analyst ·{' '}
-                  <a href="https://orcid.org/0009-0006-0347-0499" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent)' }}>
+                  <a href="https://orcid.org/0009-0006-0347-0499" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent)', textDecoration: 'underline' }}>
                     ORCID: 0009-0006-0347-0499
                   </a>
                 </div>
@@ -157,7 +157,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '2rem' }}>
             {pub.doi && (
-              <a href={`https://doi.org/${pub.doi}`} target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ fontSize: '0.9rem' }}>
+              <a href={`https://doi.org/${pub.doi}`} aria-label={`Open DOI for ${pub.title}`} target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ fontSize: '0.9rem' }}>
                 DOI: {pub.doi}
               </a>
             )}
@@ -167,7 +167,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
               </a>
             )}
             {pub.external_url && (
-              <a href={pub.external_url} target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ fontSize: '0.9rem' }}>
+              <a href={pub.external_url} aria-label={`View resource: ${pub.title}`} target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ fontSize: '0.9rem' }}>
                 {pub.external_url.includes('zenodo') ? 'View on Zenodo' : 
                  pub.external_url.includes('amazon') ? 'Buy on Amazon' : 
                  'View Publication'}
@@ -223,7 +223,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
                     color: 'var(--accent)',
                     fontWeight: '600',
                     fontSize: '0.95rem',
-                    textDecoration: 'none'
+                    textDecoration: 'underline'
                   }}
                 >
                   <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

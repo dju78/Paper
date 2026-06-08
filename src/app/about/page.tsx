@@ -87,7 +87,7 @@ export default async function AboutPage() {
                   ].map((stat) => (
                     <div 
                       key={stat.label} 
-                      aria-label={stat.desc}
+                      title={stat.desc}
                       style={{ padding: '1.5rem', background: 'white', border: '1px solid var(--border)', borderRadius: '8px', textAlign: 'center' }}
                     >
                       <div style={{ fontSize: '2.5rem', fontWeight: '800', color: 'var(--primary)', lineHeight: '1' }}>{stat.value}</div>
@@ -96,7 +96,7 @@ export default async function AboutPage() {
                   ))}
                 </div>
                 <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>
-                  Source: <a href="https://scholar.google.co.uk/citations?user=gw0w3s4AAAAJ&hl=en" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)' }}>Google Scholar</a>
+                  Source: <a href="https://scholar.google.co.uk/citations?user=gw0w3s4AAAAJ&hl=en" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', textDecoration: 'underline' }}>Google Scholar</a>
                   <span style={{ marginLeft: '1rem' }}>Last updated: {scholarMetrics.last_updated}</span>
                 </div>
               </>
@@ -136,7 +136,7 @@ export default async function AboutPage() {
                 <li key={pub.slug} style={{ padding: '1.5rem 0', borderBottom: '1px solid var(--border)' }}>
                   <div style={{ fontWeight: '600', fontSize: '1.05rem', marginBottom: '0.25rem' }}>{pub.title}</div>
                   <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginBottom: '0.5rem' }}>{pub.type} • {pub.year} {pub.journal ? `• ${pub.journal}` : ''}</div>
-                  <a href={`/${pub.slug}`} style={{ color: 'var(--primary)', fontSize: '0.9rem', fontWeight: '500' }}>Read Publication →</a>
+                  <a href={`/${pub.slug}`} aria-label={`Read publication: ${pub.title}`} style={{ color: 'var(--primary)', fontSize: '0.9rem', fontWeight: '500', textDecoration: 'underline' }}>Read Publication →</a>
                 </li>
               ))}
             </ul>
@@ -160,7 +160,7 @@ export default async function AboutPage() {
                       href={href} 
                       target={href.startsWith('http') ? '_blank' : undefined} 
                       rel="noopener noreferrer" 
-                      style={isButton ? {} : { color: 'var(--primary)', fontWeight: '500' }}
+                      style={isButton ? {} : { color: 'var(--primary)', fontWeight: '500', textDecoration: 'underline' }}
                       className={isButton ? 'btn btn-outline' : ''}
                     >
                       {value}

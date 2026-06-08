@@ -102,59 +102,69 @@ export default function PublicationsChart({ publications }: PublicationsChartPro
       {/* Donut Chart: By Type */}
       <div className="card" style={{ padding: '2rem 1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', textAlign: 'center', fontFamily: 'Inter, sans-serif', color: 'var(--text-main)' }}>By Publication Type</h3>
-        <div style={{ width: '100%', height: 350 }} aria-label="Donut chart showing publications by type">
-          <ResponsiveContainer width="100%" height="100%">
-            <PieChart>
-              <Pie
-                data={typeData}
-                cx="50%"
-                cy="50%"
-                innerRadius={60}
-                outerRadius={90}
-                paddingAngle={2}
-                dataKey="value"
-                nameKey="name"
-                label={renderCustomizedLabel}
-                labelLine={{ stroke: 'var(--border)', strokeWidth: 1 }}
-              >
-                {typeData.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                ))}
-              </Pie>
-              <Tooltip content={<CustomTooltip />} />
-            </PieChart>
-          </ResponsiveContainer>
-        </div>
+        <figure style={{ width: '100%', height: 350, margin: 0 }}>
+          <div style={{ width: '100%', height: '100%' }} aria-hidden="true">
+            <ResponsiveContainer width="100%" height="100%">
+              <PieChart>
+                <Pie
+                  data={typeData}
+                  cx="50%"
+                  cy="50%"
+                  innerRadius={60}
+                  outerRadius={90}
+                  paddingAngle={2}
+                  dataKey="value"
+                  nameKey="name"
+                  label={renderCustomizedLabel}
+                  labelLine={{ stroke: 'var(--border)', strokeWidth: 1 }}
+                >
+                  {typeData.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                  ))}
+                </Pie>
+                <Tooltip content={<CustomTooltip />} />
+              </PieChart>
+            </ResponsiveContainer>
+          </div>
+          <figcaption className="sr-only">
+            Donut chart showing publications by type: {typeData.map(d => `${d.name} ${d.value}`).join(', ')}
+          </figcaption>
+        </figure>
       </div>
 
       {/* Bar Chart: By Topic */}
       <div className="card" style={{ padding: '2rem 1.5rem', display: 'flex', flexDirection: 'column' }}>
         <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', textAlign: 'center', fontFamily: 'Inter, sans-serif', color: 'var(--text-main)' }}>By Research Topic</h3>
-        <div style={{ width: '100%', height: 350, flexGrow: 1 }} aria-label="Horizontal bar chart showing publications by topic">
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart
-              data={topicData}
-              layout="vertical"
-              margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-            >
-              <XAxis type="number" hide />
-              <YAxis 
-                type="category" 
-                dataKey="name" 
-                width={160} 
-                tick={{ fontSize: '0.75rem', fill: 'var(--text-muted)' }} 
-                axisLine={false} 
-                tickLine={false} 
-              />
-              <Tooltip cursor={{ fill: '#F8FAFC' }} content={<CustomTooltip />} />
-              <Bar dataKey="value" fill={ACCENT} radius={[0, 4, 4, 0]} barSize={16}>
-                {topicData.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={COLORS[0]} /> // Using slate for bars to keep it academic
-                ))}
-              </Bar>
-            </BarChart>
-          </ResponsiveContainer>
-        </div>
+        <figure style={{ width: '100%', height: 350, flexGrow: 1, margin: 0 }}>
+          <div style={{ width: '100%', height: '100%' }} aria-hidden="true">
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart
+                data={topicData}
+                layout="vertical"
+                margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+              >
+                <XAxis type="number" hide />
+                <YAxis 
+                  type="category" 
+                  dataKey="name" 
+                  width={160} 
+                  tick={{ fontSize: '0.75rem', fill: 'var(--text-muted)' }} 
+                  axisLine={false} 
+                  tickLine={false} 
+                />
+                <Tooltip cursor={{ fill: '#F8FAFC' }} content={<CustomTooltip />} />
+                <Bar dataKey="value" fill={ACCENT} radius={[0, 4, 4, 0]} barSize={16}>
+                  {topicData.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={COLORS[0]} /> // Using slate for bars to keep it academic
+                  ))}
+                </Bar>
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
+          <figcaption className="sr-only">
+            Horizontal bar chart showing publications by topic: {topicData.map(d => `${d.name} ${d.value}`).join(', ')}
+          </figcaption>
+        </figure>
       </div>
     </div>
   );

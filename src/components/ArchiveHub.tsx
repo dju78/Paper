@@ -119,7 +119,10 @@ export default function ArchiveHub({ initialPublications, defaultType = 'All Typ
         {/* Filters */}
         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', alignItems: 'center' }}>
           <span style={{ fontSize: '0.9rem', fontWeight: 700, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Filter by:</span>
+          <label htmlFor="publicationType" className="sr-only">Filter by publication type</label>
           <select 
+            id="publicationType"
+            name="publicationType"
             value={activeType} 
             onChange={(e) => setActiveType(e.target.value)}
             style={{ 
@@ -138,7 +141,10 @@ export default function ArchiveHub({ initialPublications, defaultType = 'All Typ
             {types.map(t => <option key={t} value={t} style={{ color: 'black' }}>{t}</option>)}
           </select>
 
+          <label htmlFor="researchTopic" className="sr-only">Filter by research topic</label>
           <select 
+            id="researchTopic"
+            name="researchTopic"
             value={activeTopic} 
             onChange={(e) => setActiveTopic(e.target.value)}
             style={{ 
@@ -210,9 +216,9 @@ export default function ArchiveHub({ initialPublications, defaultType = 'All Typ
                 )}
                 {pub.journal && (pub.doi || pub.external_url) && ' • '}
                 {pub.doi ? (
-                  <a href={`https://doi.org/${pub.doi}`} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)' }}>DOI: {pub.doi}</a>
+                  <a href={`https://doi.org/${pub.doi}`} aria-label={`Open DOI for ${pub.title}`} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', fontWeight: 500 }}>DOI: {pub.doi}</a>
                 ) : pub.external_url ? (
-                  <a href={pub.external_url} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)' }}>View Resource</a>
+                  <a href={pub.external_url} target="_blank" rel="noopener noreferrer" aria-label={`View resource: ${pub.title}`} style={{ color: 'var(--primary)', fontWeight: 500 }}>View Resource</a>
                 ) : null}
               </div>
             )}
