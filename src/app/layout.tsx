@@ -10,12 +10,24 @@ export const metadata: Metadata = {
     description: 'Academic repository and research portfolio focused on Digital Governance, Tax Policy, and Political Economy.',
     url: 'https://omoyelejd.co.uk',
     siteName: 'Daramola Joseph Omoyele Publications',
+    images: [
+      {
+        url: '/djo-logo.png',
+        width: 800,
+        height: 800,
+        alt: 'DJO Logo',
+      },
+    ],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Research & Publications | Daramola Joseph Omoyele',
     description: 'Academic archive and research portfolio.',
+    images: ['/djo-logo.png'],
+  },
+  icons: {
+    icon: '/djo-logo.png',
   },
 }
 
@@ -32,7 +44,10 @@ export default function RootLayout({
       <body>
         <header>
           <div className="container nav-content">
-            <a href="/" className="logo">Daramola Joseph Omoyele</a>
+            <a href="/" className="logo">
+              <img src="/djo-logo.png" alt="DJO Logo" className="logo-img" />
+              <span className="logo-text">Daramola Joseph Omoyele</span>
+            </a>
             <nav style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
               <a href="/" style={{ fontSize: '0.95rem', fontWeight: '500' }}>Home</a>
               <a href="/about" style={{ fontSize: '0.95rem', fontWeight: '500' }}>About</a>
