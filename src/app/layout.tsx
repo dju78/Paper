@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     siteName: 'Daramola Joseph Omoyele Publications',
     images: [
       {
-        url: '/djo-logo.png',
+        url: '/new-logo.png',
         width: 800,
         height: 800,
         alt: 'DJO Logo',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Research & Publications | Daramola Joseph Omoyele',
     description: 'Academic archive and research portfolio.',
-    images: ['/djo-logo.png'],
+    images: ['/new-logo.png'],
   },
   icons: {
     icon: '/djo-logo.png',
@@ -45,7 +45,7 @@ export default function RootLayout({
         <header>
           <div className="container nav-content">
             <a href="/" className="logo">
-              <img src="/djo-logo.png" alt="DJO Logo" className="logo-img" />
+              <img src="/new-logo.png" alt="DJO Logo" className="logo-img" />
               <span className="logo-text">Daramola Joseph Omoyele</span>
             </a>
             <nav style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
