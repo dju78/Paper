@@ -45,30 +45,62 @@ function getYouTubeId(url: string) {
   return (match && match[2].length === 11) ? match[2] : null;
 }
 
-function ScholarlyArticleJsonLd({ pub }: { pub: Publication }) {
+function ArticleJsonLd({ pub }: { pub: Publication }) {
+  const isBook = pub.type === 'Book';
+  const pageUrl = `${BASE_URL}/${pub.slug}`;
+  const datePublished = `${pub.year}-01-01`;
+
+  // Article rich results need an absolute image URL; fall back to the site logo.
+  const imageUrl = pub.cover_image
+    ? pub.cover_image.startsWith('http')
+      ? pub.cover_image
+      : `${BASE_URL}${pub.cover_image.startsWith('/') ? '' : '/'}${pub.cover_image}`
+    : `${BASE_URL}/new-logo.png`;
+
   const schema = {
     '@context': 'https://schema.org',
-    '@type': pub.type === 'Book' ? 'Book' : 'ScholarlyArticle',
-    headline: pub.title,
+    // Use the generic, rich-results-eligible "Article" type (Google does not
+    // render ScholarlyArticle/Book as an Article rich result); keep the
+    // scholarly type alongside it for academic semantics.
+    '@type': isBook ? 'Book' : ['Article', 'ScholarlyArticle'],
+    headline: pub.title.slice(0, 110),
     name: pub.title,
     abstract: pub.abstract,
+    description: pub.abstract
+      ? pub.abstract.slice(0, 250).replace(/\n/g, ' ')
+      : undefined,
+    image: [imageUrl],
     author: {
       '@type': 'Person',
+      '@id': `${BASE_URL}/#person`,
       name: 'Daramola Joseph Omoyele',
-      url: 'https://omoyelejd.co.uk',
+      url: BASE_URL,
       sameAs: [
         'https://daramolajo.co.uk',
         'https://orcid.org/0009-0006-0347-0499',
-        'https://github.com/dju78'
+        'https://github.com/dju78',
       ],
     },
-    datePublished: `${pub.year}-01-01`,
-    publisher: pub.journal
-      ? { '@type': 'Organization', name: pub.journal }
-      : undefined,
-    ...(pub.doi ? { identifier: { '@type': 'PropertyValue', propertyID: 'DOI', value: pub.doi } } : {}),
-    url: `${BASE_URL}/${pub.slug}`,
+    publisher: {
+      '@type': 'Organization',
+      name: pub.journal || 'Daramola Joseph Omoyele',
+      logo: {
+        '@type': 'ImageObject',
+        url: `${BASE_URL}/new-logo.png`,
+      },
+    },
+    datePublished,
+    dateModified: datePublished,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
+    url: pageUrl,
+    inLanguage: 'en',
     keywords: pub.topics?.join(', '),
+    ...(pub.doi
+      ? {
+          identifier: { '@type': 'PropertyValue', propertyID: 'DOI', value: pub.doi },
+          sameAs: `https://doi.org/${pub.doi}`,
+        }
+      : {}),
   };
 
   return (
@@ -93,7 +125,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
   return (
     <>
-      <ScholarlyArticleJsonLd pub={pub} />
+      <ArticleJsonLd pub={pub} />
       <div className="container" style={{ maxWidth: '900px', padding: '4rem 0' }}>
         <a href="/" style={{ display: 'inline-flex', alignItems: 'center', marginBottom: '2rem', color: 'var(--text-muted)', fontSize: '0.95rem', textDecoration: 'underline' }}>
           ← Back to Archive
