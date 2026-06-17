@@ -29,6 +29,64 @@ export const metadata: Metadata = {
   icons: {
     icon: '/djo-logo.png',
   },
+  keywords: [
+    'Daramola Joseph Omoyele',
+    'DJO',
+    'Economist',
+    'Chartered Accountant',
+    'Data Analyst',
+    'Regulatory and Policy Analytics',
+    'Tax Policy',
+    'Digital Governance',
+    'Development Economics',
+  ],
+  authors: [{ name: 'Daramola Joseph Omoyele', url: 'https://omoyelejd.co.uk' }],
+  creator: 'Daramola Joseph Omoyele',
+  publisher: 'Daramola Joseph Omoyele',
+  alternates: {
+    canonical: 'https://omoyelejd.co.uk',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+}
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Person',
+      '@id': 'https://omoyelejd.co.uk/#person',
+      name: 'Daramola Joseph Omoyele',
+      alternateName: 'DJO',
+      url: 'https://omoyelejd.co.uk',
+      image: 'https://omoyelejd.co.uk/new-logo.png',
+      jobTitle: [
+        'Economist',
+        'Chartered Accountant',
+        'Data Analyst',
+        'Regulatory & Policy Analytics Specialist',
+      ],
+      sameAs: ['https://daramolajo.co.uk'],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://omoyelejd.co.uk/#website',
+      url: 'https://omoyelejd.co.uk',
+      name: 'Daramola Joseph Omoyele | Research & Publications',
+      description:
+        'Academic repository and research portfolio focused on Digital Governance, Tax Policy, and Political Economy.',
+      publisher: { '@id': 'https://omoyelejd.co.uk/#person' },
+      inLanguage: 'en',
+    },
+  ],
 }
 
 export default function RootLayout({
@@ -40,13 +98,16 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" async></script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body>
         <header>
           <div className="container nav-content">
-            <a href="/" className="logo">
-              <img src="/new-logo.png" alt="DJO Logo" className="logo-img" />
-              <span className="logo-text">Daramola Joseph Omoyele</span>
+            <a href="/" className="logo" aria-label="Daramola Joseph Omoyele — Home">
+              <img src="/new-logo.png" alt="Daramola Joseph Omoyele (DJO) logo" className="logo-img" />
             </a>
             <nav style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
               <a href="/" style={{ fontSize: '0.95rem', fontWeight: '500' }}>Home</a>
