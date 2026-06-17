@@ -3,46 +3,11 @@ import ArchiveHub from '../components/ArchiveHub';
 import PublicationsChart from '../components/PublicationsChart';
 import ScholarMetrics from '../components/ScholarMetrics';
 
-const websiteJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: 'Daramola Joseph Omoyele — Research & Publications',
-  url: 'https://omoyelejd.co.uk',
-  description: 'An academic publication hub and research archive by Daramola Joseph Omoyele, Economist and Senior Data Analyst.',
-  author: {
-    '@type': 'Person',
-    name: 'Daramola Joseph Omoyele',
-    url: 'https://omoyelejd.co.uk',
-    sameAs: [
-      'https://daramolajo.co.uk',
-      'https://orcid.org/0009-0006-0347-0499',
-      'https://scholar.google.co.uk/citations?user=gw0w3s4AAAAJ&hl=en',
-      'https://www.linkedin.com/in/daramola-omoyele-bbb006244/',
-      'https://github.com/dju78'
-    ],
-    jobTitle: 'Economist & Senior Data Analyst',
-    worksFor: {
-      '@type': 'Organization',
-      name: 'Univelcity Consulting',
-      address: { '@type': 'PostalAddress', addressCountry: 'GB' },
-    },
-  },
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: { '@type': 'EntryPoint', urlTemplate: 'https://omoyelejd.co.uk/?search={search_term_string}' },
-    'query-input': 'required name=search_term_string',
-  },
-};
-
 export default async function Page() {
   const publications = await getAllPublications();
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
-      />
       <div className="container">
         <div style={{ maxWidth: '800px', marginBottom: '5rem', paddingTop: '1rem' }}>
           <h1 style={{ fontSize: '2.8rem', marginBottom: '0.5rem', fontWeight: '800', lineHeight: '1.15' }}>

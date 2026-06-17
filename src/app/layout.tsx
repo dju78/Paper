@@ -74,7 +74,18 @@ const jsonLd = {
         'Data Analyst',
         'Regulatory & Policy Analytics Specialist',
       ],
-      sameAs: ['https://daramolajo.co.uk'],
+      worksFor: {
+        '@type': 'Organization',
+        name: 'Univelcity Consulting',
+        address: { '@type': 'PostalAddress', addressCountry: 'GB' },
+      },
+      sameAs: [
+        'https://daramolajo.co.uk',
+        'https://orcid.org/0009-0006-0347-0499',
+        'https://scholar.google.co.uk/citations?user=gw0w3s4AAAAJ&hl=en',
+        'https://www.linkedin.com/in/daramola-omoyele-bbb006244/',
+        'https://github.com/dju78',
+      ],
     },
     {
       '@type': 'WebSite',
@@ -85,6 +96,14 @@ const jsonLd = {
         'Academic repository and research portfolio focused on Digital Governance, Tax Policy, and Political Economy.',
       publisher: { '@id': 'https://omoyelejd.co.uk/#person' },
       inLanguage: 'en',
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: {
+          '@type': 'EntryPoint',
+          urlTemplate: 'https://omoyelejd.co.uk/?search={search_term_string}',
+        },
+        'query-input': 'required name=search_term_string',
+      },
     },
   ],
 }
